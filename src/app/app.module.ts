@@ -8,6 +8,8 @@ import {SiblingOneComponent} from './sibling-one/sibling-one.component';
 import {SiblingTwoComponent} from './sibling-two/sibling-two.component';
 import {AppRoutingModule} from './/app-routing.module';
 import {FormsModule} from '@angular/forms';
+import { Parent1Component } from './parent1/parent1.component';
+import { Child1Component } from './child1/child1.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +18,9 @@ import {FormsModule} from '@angular/forms';
         ChildComponent,
         ParentOfSiblingsComponent,
         SiblingOneComponent,
-        SiblingTwoComponent
+        SiblingTwoComponent,
+        Parent1Component,
+        Child1Component
     ],
     imports: [
         BrowserModule,

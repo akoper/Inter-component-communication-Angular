@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { DataService} from '../data.service';
 
 @Component({
   selector: 'app-sibling-two',
   templateUrl: './sibling-two.component.html',
   styleUrls: ['./sibling-two.component.css']
 })
-export class SiblingTwoComponent implements OnInit {
+export class SiblingTwoComponent {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
-  ngOnInit() {
+  getName(name: string): void {
+    this.dataService.sendData(name);
   }
 
 }

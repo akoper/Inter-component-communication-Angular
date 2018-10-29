@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import { DataService} from '../data.service';
 
 @Component({
   selector: 'app-sibling-one',
   templateUrl: './sibling-one.component.html',
   styleUrls: ['./sibling-one.component.css']
 })
-export class SiblingOneComponent implements OnInit {
+export class SiblingOneComponent implements OnDestroy {
 
-  constructor() { }
+  name: any;
+  subscription: Subscription;
 
-  ngOnInit() {
+  constructor(private dataService: DataService) {
+    this.subscription = this.dataService.getData().subscribe(
+        name => { this.name = name; });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }

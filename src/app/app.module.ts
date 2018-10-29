@@ -10,6 +10,7 @@ import {AppRoutingModule} from './/app-routing.module';
 import {FormsModule} from '@angular/forms';
 import { Parent1Component } from './parent1/parent1.component';
 import { Child1Component } from './child1/child1.component';
+import { DataService} from './data.service';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,7 @@ import { Child1Component } from './child1/child1.component';
         AppRoutingModule,
         FormsModule
     ],
-    providers: [],
+    providers: [DataService],
     bootstrap: [AppComponent]
 })
 export class AppModule {

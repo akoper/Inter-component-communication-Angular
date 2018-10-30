@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-parent1',
   templateUrl: './parent1.component.html',
   styleUrls: ['./parent1.component.css']
 })
-export class Parent1Component implements OnInit {
+export class Parent1Component  {
 
-  constructor() { }
+  name1: string;
 
-  ngOnInit() {
-  }
-
+    getName(name: string): void {
+        this.name1 = name;
+    }
 }

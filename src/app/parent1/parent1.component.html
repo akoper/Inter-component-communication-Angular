@@ -1,7 +1,9 @@
-<h4 class="mt-5">Parent to child communication with input binding</h4>
-<div class="bg-dark m-3 p-3">
+<h4>Parent to child communication with input binding</h4>
+<div class="bg-dark p-3 mb-5">
   <b>Parent component</b><br>
+
   Name <input type="text" #name class="form-control w-25 d-inline mt-2"><br>
   <button type="submit" class="btn btn-primary mt-2" (click)="getName(name.value)">Submit</button>
   <app-child1 [name]="name1"></app-child1>
+
 </div>

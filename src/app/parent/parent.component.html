@@ -1,6 +1,8 @@
-<h4 class="mt-5">Child to parent communication with input binding and EventEmitter</h4>
-<div class="bg-secondary m-3 p-3">
+<h4>Child to parent communication with input binding and EventEmitter</h4>
+<div class="bg-secondary mb-5 p-3">
   <b>Parent component</b><br>
+
   Name is: {{name}}
   <app-child (messageEvent)="listenName($event)"></app-child>
+
 </div>
